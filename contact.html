@@ -1,0 +1,180 @@
+ <!  DOCTYPE  html  >
+<html>
+<head>
+	<meta  charset  ="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>  
+	<link rel= "stylesheet" href= "reset.css">
+	<link rel= "stylesheet" media="screen and (min-width: 0px) "href= "stylesheet_small.css">
+	<link rel= "stylesheet" media="screen and (min-width: 800px) "href= "stylesheet.css">
+	<script src="geolocation.js"></script>
+	<script>
+    var firstname, lastname;
+    function initiate(){
+      //var get = document.getElementById('getlocation');
+	  //get.addEventListener('click', getlocation);
+	  firstname = document.getElementById("first_name");
+      lastname = document.getElementById("last_name");
+      firstname.addEventListener("input", validation);
+      lastname.addEventListener("input", validation);
+      validation();
+    }
+    function validation(){
+      if(firstname.value == ''){
+        firstname.setCustomValidity('Please fill the first name');
+		firstname.style.background = '#FFDDDD';
+      }else{
+        firstname.setCustomValidity('');
+		firstname.style.background = '#FFFFFF';
+      }
+	  if(lastname.value == ''){
+        lastname.setCustomValidity('Please fill the last name');
+        lastname.style.background = '#FFDDDD';
+      }else{
+        lastname.setCustomValidity('');
+        lastname.style.background = '#FFFFFF';
+      }
+    }
+    addEventListener("load", initiate);
+	
+	var x = document.getElementById("demo");
+
+	function getLocation() {
+		if (navigator.geolocation) {
+			navigator.geolocation.getCurrentPosition(showPosition, showError);
+		} else {
+			x.innerHTML = "Geolocation is not supported by this browser.";
+		}
+	}
+
+	function showPosition(position) {
+		var latlon = position.coords.latitude + "," + position.coords.longitude;
+
+		var img_url = "http://maps.googleapis.com/maps/api/staticmap?center="
+		+latlon+"&zoom=14&size=400x300&sensor=false";
+		document.getElementById("mapholder").innerHTML = "<img src='"+img_url+"'>";
+	}
+
+	function showError(error) {
+		switch(error.code) {
+			case error.PERMISSION_DENIED:
+				x.innerHTML = "User denied the request for Geolocation."
+				break;
+			case error.POSITION_UNAVAILABLE:
+				x.innerHTML = "Location information is unavailable."
+				break;
+			case error.TIMEOUT:
+				x.innerHTML = "The request to get user location timed out."
+				break;
+			case error.UNKNOWN_ERROR:
+				x.innerHTML = "An unknown error occurred."
+				break;
+		}
+	}
+  </script>
+		
+</head>
+<body>
+	
+	
+	<header id=header1>    
+	</header>
+<hr/>	
+	
+	<section id ="main_section">
+		<section id="content2">
+			<section id="header2">
+				<h1>Contact Us :</h1>
+				
+			</section>
+
+			<section id="form1">
+			<form name ="contact-form" id ="contact-form" method ="post" action ="">
+			
+				<table>
+				<tr><td><label width = "25" for ="Subject" >Subject : </label></td>
+				<td><input type ="text" name ="subject" id ="subject" placeholder ="Subject"></td></tr>
+				
+				
+				<tr><td><label for ="First Name">First Name :</label></td>
+				<td><input type ="text" name ="first_name" id ="first_name" placeholder ="First Name"></td></tr>
+				
+				
+				<tr><td><label for ="Last Name">Last Name :</label></td>
+				<td><input type ="text" name ="last_name" id ="last_name" placeholder ="Last Name"></td></tr>
+				
+				<tr><td><label for ="Birthday">Birthday :</label></td>
+				<td><input type ="date" name ="birthday" id ="birthday" placeholder ="Birthday"></td></tr>
+				
+				<tr><td><label for ="Email">Email Address :</label></td>
+				<td><input type="email" name="email" autocomplete="off" required placeholder ="Email"></td></tr>
+								
+				<tr><td><label for ="Telephone Number">Telephone Number :</label></td>
+				<td><input type ="tel" name ="telephone_no" id ="telephone" placeholder ="Telephone No"></td></tr>
+				
+				<tr><td><label for ="Event Type">Event Type :</label></td>
+				<td><input type = "checkbox" id ="checkbox">Birthday 
+				<input type="checkbox"> Wedding <input type="checkbox"> Other </td></tr>
+				
+				<tr><td><label for ="Message">Message :</label></td>
+				<td><textarea id ="message" rows="5" cols="22" placeholder ="Message"></textarea></td></tr>
+				
+				</table>
+				
+				<p><input type = "submit" value = "Send message" name = "send" id = "send"></p>
+				
+				
+			</form>
+			</section>
+			
+			<section id="section2">
+			
+			<h2>Business Hours :</h2>
+				<p id= "business">Monday – Thursday: 7am – 10pm.<br />
+					Friday: 7am – 11pm.<br />
+					Saturday: 8am – 11pm.<br />
+					Sunday: 8am – 8pm.</p>	
+					
+			</section>
+			<section id ="audio">
+			
+			<audio src="Tinkerbells-Dance.mp3" type="audio/mp3" controls="controls" autoplay>
+	 
+			Your browser does not support the audio element.
+			</audio>
+			<!--<form name ="getlocationform" id ="getlocationform" method ="post" action ="">
+				<br>
+				<p id="demo">Click the button to get your position.</p>
+				<button onclick="getLocation()">Click</button>
+				<div id="mapholder"></div>
+			</form>-->
+			
+			</section>		
+				
+				
+													
+		</section>
+		<section id="side-nav">
+			<div id="side-nav-container">				
+				<ul>
+					<li><a href ="./index.html">HOME</a></li>
+					<li><a href ="./About.html">ABOUT US</a></li>
+					<li><a href ="./flavours.html">FLAVOURS</a></li>
+					<li><a href ="./gallery.html">GALLERY</a></li>
+					<li><a href ="./events.html">EVENTS</a></li>
+					<li><a href ="./deals.html">DEALS</a></li>
+					<li><a href ="">PRICES</a></li>
+					<li><a href ="./faq.html">FAQ</a></li>
+					<li><a href ="./contact.html">CONTACT US</a></li>
+					<li><a href ="./testimonial.html">TESTIMONIALS </a></li>
+				</ul>
+				
+			</div>	
+		</section>
+	
+	</section>
+	<footer >
+	HOME | SITE-MAP | EVENT | CONTACT US |TERMS | PRIVACY 
+	</footer>
+</body>
+</html>   

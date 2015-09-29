@@ -1,0 +1,96 @@
+ <!  DOCTYPE  html  >
+<html>
+<head>
+	<meta  charset  ="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us</title>  
+	<link rel= "stylesheet" href= "reset.css">
+	<link rel= "stylesheet" media="screen and (min-width: 0px) "href= "stylesheet_small.css">
+	<link rel= "stylesheet" media="screen and (min-width: 800px) "href= "stylesheet.css">
+	<script>
+	var x = document.getElementById("demo");
+
+	function getLocation() {
+		if (navigator.geolocation) {
+			navigator.geolocation.getCurrentPosition(showPosition, showError);
+		} else {
+			x.innerHTML = "Geolocation is not supported by this browser.";
+		}
+	}
+	
+	function showPosition(position) {
+		var latlon = position.coords.latitude + "," + position.coords.longitude;
+		var img_url = "http://maps.googleapis.com/maps/api/staticmap?center="
+		+latlon+"&zoom=14&size=400x200&sensor=true";
+		document.getElementById("mapholder").innerHTML = "<img src='"+img_url+"'>";
+	}
+
+	function showError(error) {
+		switch(error.code) {
+			case error.PERMISSION_DENIED:
+				x.innerHTML = "User denied the request for Geolocation."
+				break;
+			case error.POSITION_UNAVAILABLE:
+				x.innerHTML = "Location information is unavailable."
+				break;
+			case error.TIMEOUT:
+				x.innerHTML = "The request to get user location timed out."
+				break;
+			case error.UNKNOWN_ERROR:
+				x.innerHTML = "An unknown error occurred."
+				break;
+		}
+	}
+	</script>	
+		
+</head>
+<body onload="getLocation()">
+	<header id=header1>    
+	</header>
+<hr/>	
+	
+	<section id ="main_section">
+		<section id="content2">
+			<header>
+				<h1>About Us :</h1>
+			</header>	
+				<article id="aboutus_content">	
+				<p> Owner Sarah is a professional baking expert who has grown her gourmet cakes into an incredibly successful business.She is now poised to take her business to the next level by expanding her retail space and opening additional retail locations.She also plans to drastically expand her reach by growing the shipping division of her company so she can provide more products to a wider range of customers.</p>
+				<br/>
+				
+				<img src = "Picture1.png" alt ="small cake" id = "small-image" width="100" height= "100"/>
+				
+				<p id="demo" align="center">Our Location on the map:</p>
+
+				<!--<button onclick="getLocation()">Try It</button>-->
+
+				<div id="mapholder" align="center"></div>
+
+				</article>
+				
+													
+		</section>
+		<section id="side-nav">
+			<div id="side-nav-container">				
+				<ul>
+					<li><a href ="./index.html">HOME</a></li>
+					<li><a href ="./About.html">ABOUT US</a></li>
+					<li><a href ="./flavours.html">FLAVOURS</a></li>
+					<li><a href ="./gallery.html">GALLERY</a></li>
+					<li><a href ="">EVENTS</a></li>
+					<li><a href ="./deals.html">DEALS</a></li>
+					<li><a href ="">PRICES</a></li>
+					<li><a href ="./faq.html">FAQ</a></li>
+					<li><a href ="./contact.html">CONTACT US</a></li>
+					<li><a href ="./testimonial.html">TESTIMONIALS </a></li>
+				</ul>
+				
+			</div>	
+		</section>
+	
+	</section>
+	<footer >
+	HOME | SITE-MAP | EVENT | CONTACT US |TERMS | PRIVACY 
+	</footer>
+</body>
+</html>   

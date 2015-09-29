@@ -1,0 +1,111 @@
+*{
+	margin:0em;
+	padding:0em;}
+	
+header,section,footer,aside,nav,article,figure{
+	display:block;
+	}	
+	
+
+/* Horizontal rule Styling  */
+hr	{height:.0625em
+	background-color:#D05A57;
+	}
+
+h1	{font: 1.5625em Calibri;
+	color:#7A406B;
+	margin:1.25em;
+	padding:1.25em;
+	text-shadow:0.0625em 0.0625em #888888; /* Text Shadow */	
+	} 
+
+/* Header styling (Logo & Title of the page) starts here */		
+
+#header1{background-image:url(banner1.fw-small.png);
+		background-repeat: no-repeat;
+		background-size:100%;		
+		height:17%;}
+
+/* Section Styling starts here */
+#main_section	{width:100%;			
+				height:75%;}
+			
+#content{float: right; width:80%;
+		background-image:url(cake2.jpg);
+		background-repeat:no-repeat;
+		height: 98.5%;
+		background-size: 100%;			
+		}
+
+#content p {text-align : center;
+			padding:.625em;
+			font:1.125em  Calibri ;
+            color:#7A406B;			
+		}
+			
+/* Footer styling starts here */		
+footer{
+	clear:both;
+	text-align:center;
+	border-top:.0625em #DB46B3;
+	height: 5%;
+	padding:.625em;
+	font:.875em  Calibri;
+	background:#F7D7DC;}
+
+#p_style1{color:blue;
+		font-weight:bold;
+        font:Calibri;		  
+		}			
+
+/* Side Navigation bar Styling starts here */			
+#side-nav{
+		height:98.5%;
+		width:20%;
+		margin:0em 0em;
+		background:#F7D7DC;
+		list-style:none;
+		color:#7A406B;
+		}
+		
+#side-nav li{		
+		margin:0.3125em 0em;
+		padding:0.3125em;
+		list-style:none;
+		color:#7A406B;
+		font:1em Calibri;
+		}
+
+#side-nav-container a
+		{display:block;
+		color:#7A406B;
+		background: #F293E4;
+		width: 80%;
+		text-decoration:none;
+		padding:.3125em;
+		MARGIN:0.09em;
+		margin-left:2.1em;
+		box-shadow:.4em .4em .125em #888888;	/*Box-shadow styling */
+		/* Gradient styling */
+		background: -webkit-linear-gradient(to right,#F293E4, #F4DEF4);
+		background: -moz-linear-gradient(#F293E4, #F4DEF4);
+		background: linear-gradient(to right , #F293E4, #F4DEF4);
+		
+		/* Transition */
+		-webkit-transition: -webkit-transform 2s, background 2s, width 2s;
+		transition: -webkit-transform 2s, background 2s, width 2s;
+		-moz-transition: -webkit-transform 2s, background 2s, width 2s;
+		-o-transition: -webkit-transform 2s, background 2s, width 2s;
+		}	
+		
+#side-nav-container li {
+					width: 10em;
+					-webkit-transition: -webkit-transform 1s, background 1s, width 1s;
+					}
+		
+
+#side-nav-container a:hover{
+			-webkit-transform:scale(1.2);
+			background:#ED9CED;
+			width:1.09em;
+			}

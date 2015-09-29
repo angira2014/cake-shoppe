@@ -1,0 +1,115 @@
+ <!  DOCTYPE  html  >
+<html>
+<head>
+	<meta  charset  ="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery</title>  
+	<link rel= "stylesheet" href= "reset.css">
+	<link rel= "stylesheet" media="screen and (min-width: 0px) "href= "stylesheet_small.css">
+	<link rel= "stylesheet" media="screen and (min-width: 800px) "href= "stylesheet.css">
+	<script type = "text/javascript">
+	var currentImg = 0
+	
+	function changeImg(){
+		if (document.images==true){
+			if(currentImg < 12){
+				currentImg  = currentImg + 1
+				}
+			else {
+				currentImg =1
+			}
+	
+			if (currentImg == 1){
+				document.slideShow.src = "cake1.jpg"
+				}
+			else if (currentImg == 2){
+				document.slideShow.src ="cake3.jpg"
+				}
+			else if (currentImg == 3){
+				document.slideShow.src ="cake4.jpg"
+				}
+			else if (currentImg == 4){
+				document.slideShow.src ="cake5.jpg"
+				}
+			else if (currentImg == 5){
+				document.slideShow.src ="cake6.jpg"
+				}	
+			else if (currentImg == 6){
+				document.slideShow.src ="cake7.jpg"
+				}
+			else if (currentImg == 7){
+				document.slideShow.src ="cake8.jpg"
+				}
+			else if (currentImg == 8){
+				document.slideShow.src ="cake9.jpg"
+				}
+			else if (currentImg == 9){
+				document.slideShow.src ="cake10.jpg"
+				}	
+			else if (currentImg == 10){
+				document.slideShow.src ="cake11.jpg"
+				}	
+			else if (currentImg == 11){
+				document.slideShow.src ="cake12.jpg"
+				}
+			
+				
+				
+				setTimeout("changeImg()",2000)
+		}
+	}		
+	
+	</script>
+		
+</head >
+<body onload = "changeImg()">
+	<header id=header1>    
+	</header>
+<hr/>	
+	
+	<section id ="main_section">
+		<section id="content2">
+			<header>
+				<h1>Gallery :</h1>
+			</header>	
+				<article id="aboutus_content">	
+				<img src = "cake1.jpg" alt ="cake1" id = "slideShow" width ="150" height = "150" name = "slideShow"/>
+				<img src = "cake3.jpg" alt ="cake3" id = "cake3" width ="150" height = "150"/>
+				<img src = "cake4.jpg" alt ="cake4" id = "cake4" width ="150" height = "150"/>
+				<img src = "cake5.jpg" alt ="cake5" id = "cake5" width ="150" height = "150"/>
+				<img src = "cake6.jpg" alt ="cake6" id = "cake6" width ="150" height = "150"/> <br>
+				<img src = "cake7.jpg" alt ="cake7" id = "cake7" width ="150" height = "150"/>
+				<img src = "cake8.jpg" alt ="cake8" id = "cake8" width ="150" height = "150"/>
+				<img src = "cake9.jpg" alt ="cake9" id = "cake9" width ="150" height = "150"/>
+				<img src = "cake10.jpg" alt ="cake10" id = "cake10" width ="150" height = "150"/>
+				<img src = "cake11.jpg" alt ="cake11" id = "cake11" width ="150" height = "150"/>
+				
+				
+				</article>
+				
+													
+		</section>
+		<section id="side-nav">
+			<div id="side-nav-container">				
+				<ul>
+					<li><a href ="./index.html">HOME</a></li>
+					<li><a href ="./About.html">ABOUT US</a></li>
+					<li><a href ="">FLAVOURS</a></li>
+					<li><a href ="./gallery.html">GALLERY</a></li>
+					<li><a href ="">EVENTS</a></li>
+					<li><a href ="">DEALS</a></li>
+					<li><a href ="">PRICES</a></li>
+					<li><a href ="./faq.html">FAQ</a></li>
+					<li><a href ="./contact.html">CONTACT US</a></li>
+					<li><a href ="">TESTIMONIALS</a></li>
+				</ul>
+				
+			</div>	
+		</section>
+	
+	</section>
+	<footer >
+	HOME | SITE-MAP | EVENT | CONTACT US |TERMS | PRIVACY 
+	</footer>
+</body>
+</html>   
